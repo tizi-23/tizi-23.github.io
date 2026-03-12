@@ -11,18 +11,63 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">      <!-- Format -->
-    <title>Tianyi Zhang Portfolio: Home Page</title>
-    <!-- <link rel="stylesheet" href="style.css"> --> <!-- Link to CSS if needed -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="nav.css">
 </head>
-
 <body>
-  <h1>Hello, world!</h1>    <!-- Body test -->
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+                <div class="logo" style="display: flex; align-items: center; gap: 12px;">
+                    <img src="logo.png" alt="TZ Logo" style="height: 48px; width: 48px; display: block;">
+                    Portfolio
+                </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Reflection</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <div class="hero">
+        <h1>Welcome! Thank you for visiting my portfolio!</h1>
+        <p>-Tianyi Zhang</p>
+        <a href="#" class="cta-button">Explore Work</a>
+    </div>
+
+    <!-- Featured Projects Section -->
+    <div class="section">
+        <h2>"To erase the line between man and machine is to obscure the line between men and Gods". -Nathan, Ex Machina</h2>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <div class="feature-icon"></div>
+                <h3>Project 1</h3>
+                <p>Placeholder Text.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"></div>
+                <h3>Project 2</h3>
+                <p>Placeholder Text.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"></div>
+                <h3>Project 3</h3>
+                <p>Placeholder Text.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Portfolio. All rights reserved.</p>
+    </footer>
+
 </body>
-
-<footer>
-  <h2>Tianyi Zhang, Feb 5, 2026</h2>  <!-- Footer -->
-</footer>
-
 </html>
-
