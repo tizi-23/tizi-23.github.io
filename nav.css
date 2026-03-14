@@ -1,11 +1,19 @@
 /* Navigation */
-        nav {
+        header, nav {
             background: rgba(255, 255, 255, 0.8);
             backdrop-filter: saturate(180%) blur(20px);
             position: sticky;
             top: 0;
             z-index: 1000;
             border-bottom: 1px solid #d2d2d7;
+        }
+
+        /* Prevent double border when header wraps nav */
+        header nav {
+            border-bottom: none;
+            position: static;
+            background: transparent;
+            backdrop-filter: none;
         }
 
         .nav-container {
