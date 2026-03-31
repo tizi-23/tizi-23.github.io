@@ -329,20 +329,20 @@
             }
         }
 
-        /* ================================ */
-        /* Print Styles for about.html      */
-        /* ================================ */
+        /* Print Styles for about.html */
  
         @media print {
  
             @page {
                 margin: 1in;
+                size: letter;
             }
  
             body {
                 font-family: Georgia, "Times New Roman", Times, serif;
                 color: #000 !important;
                 background: white !important;
+                overflow: hidden;
             }
  
             body * {
@@ -399,25 +399,70 @@
                 display: none !important;
             }
  
-            footer img,
-            footer svg,
-            footer i,
-            footer .footer-logo,
-            footer .social-icons {
+ 
+            .section h1,
+            .about-text h1 {
+                font-size: 24px !important;
+                margin-bottom: 8px !important;
+            }
+ 
+            .section h2 {
+                font-size: 18px !important;
+                margin-bottom: 8px !important;
+            }
+ 
+            .about-text p,
+            .section > p,
+            p {
+                font-size: 12px !important;
+                line-height: 1.4 !important;
+                margin-bottom: 6px !important;
+            }
+ 
+            .custom-list,
+            ul, ol {
+                margin: 6px 0 !important;
+                padding: 0 0 0 18px !important;
+            }
+ 
+            .custom-list li,
+            ul li, ol li {
+                font-size: 12px !important;
+                line-height: 1.4 !important;
+                padding: 2px 0 !important;
+                margin-bottom: 2px !important;
+            }
+ 
+            .section {
+                margin: 10px 0 !important;
+                padding: 0 !important;
+                box-shadow: none;
+            }
+ 
+            .about-content {
+                gap: 10px !important;
+                margin-top: 10px !important;
+            }
+ 
+            .custom-list li {
+                border-left: none !important;
+                box-shadow: none !important;
+                background: none !important;
+                padding-left: 0 !important;
+                border-radius: 0 !important;
+            }
+ 
+            footer * {
                 display: none !important;
             }
  
             footer {
                 background: white !important;
                 color: #000 !important;
-                padding: 20px 0;
-                margin-top: 40px;
+                padding: 8px 0 0 0 !important;
+                margin-top: 12px !important;
                 border-top: 1px solid #000;
-            }
- 
-            footer p {
-                opacity: 1 !important;
-                color: #000 !important;
+                text-align: center;
             }
  
             footer::after {
@@ -426,26 +471,19 @@
                 display: block;
                 color: #000 !important;
                 font-family: Georgia, "Times New Roman", Times, serif !important;
-                font-size: 14px;
-                line-height: 1.6;
-            }
-
-            .section {
-                margin: 20px 0;
-                padding: 0;
-                box-shadow: none;
+                font-size: 12px;
+                line-height: 1.4;
             }
  
-            .custom-list li {
-                border-left: none !important;
-                box-shadow: none !important;
-                background: none !important;
-                padding-left: 0;
+            *, *::before, *::after {
+                page-break-inside: avoid;
+                break-inside: avoid;
             }
  
             a[href]::after {
                 content: " (" attr(href) ")";
-                font-size: 12px;
+                font-size: 10px;
                 color: #000 !important;
             }
         }
+ 
