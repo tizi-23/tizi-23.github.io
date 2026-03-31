@@ -329,3 +329,123 @@
             }
         }
 
+        /* ================================ */
+        /* Print Styles for about.html      */
+        /* ================================ */
+ 
+        @media print {
+ 
+            @page {
+                margin: 1in;
+            }
+ 
+            body {
+                font-family: Georgia, "Times New Roman", Times, serif;
+                color: #000 !important;
+                background: white !important;
+            }
+ 
+            body * {
+                visibility: hidden;
+            }
+ 
+            .about-text h1,
+            .about-text p,
+            .about-text ul,
+            .about-text ol,
+            .about-text li,
+            .section h1,
+            .section > h1,
+            .section > p,
+            .section ul,
+            .section ol,
+            .section li,
+            .custom-list,
+            .custom-list li,
+            footer,
+            footer p {
+                visibility: visible;
+            }
+ 
+            .about-text h1,
+            .about-text p,
+            .about-text ul,
+            .about-text ol,
+            .about-text li,
+            .section h1,
+            .section > h1,
+            .section > p,
+            .section ul,
+            .section ol,
+            .section li,
+            .custom-list li,
+            footer,
+            footer p {
+                color: #000 !important;
+                font-family: Georgia, "Times New Roman", Times, serif !important;
+            }
+ 
+            nav,
+            .nav-container,
+            .nav-links,
+            .about-image,
+            .feature-icon,
+            .feature-grid,
+            .feature-card,
+            .hero,
+            .cta-button,
+            .resume-link,
+            .reflection-box {
+                display: none !important;
+            }
+ 
+            footer img,
+            footer svg,
+            footer i,
+            footer .footer-logo,
+            footer .social-icons {
+                display: none !important;
+            }
+ 
+            footer {
+                background: white !important;
+                color: #000 !important;
+                padding: 20px 0;
+                margin-top: 40px;
+                border-top: 1px solid #000;
+            }
+ 
+            footer p {
+                opacity: 1 !important;
+                color: #000 !important;
+            }
+ 
+            footer::after {
+                content: "Tianyi Zhang  |  tzdhz@umsystem.edu  |  (626) 267-1376";
+                visibility: visible;
+                display: block;
+                color: #000 !important;
+                font-family: Georgia, "Times New Roman", Times, serif !important;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+
+            .section {
+                margin: 20px 0;
+                padding: 0;
+                box-shadow: none;
+            }
+ 
+            .custom-list li {
+                border-left: none !important;
+                box-shadow: none !important;
+                background: none !important;
+                padding-left: 0;
+            }
+ 
+            a[href]::after {
+                content: " (" attr(href) ")";
+                font-size: 12px;
+                color: #000 !important;
+            }
+        }
