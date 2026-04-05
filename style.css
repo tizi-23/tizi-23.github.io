@@ -329,6 +329,98 @@
             }
         }
 
+        /* Contact Page Styles */
+ 
+        .contact-container {
+            max-width: 600px;
+            margin: 60px auto;
+            background: white;
+            padding: 60px;
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+ 
+        .form-group {
+            margin-bottom: 30px;
+        }
+ 
+        .form-group label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 500;
+            font-size: 14px;
+        }
+ 
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #d2d2d7;
+            border-radius: 10px;
+            font-size: 16px;
+            font-family: inherit;
+            transition: border-color 0.3s;
+            background: white;
+        }
+ 
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+ 
+        .form-group textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+ 
+        .submit-button {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+ 
+        .submit-button:hover {
+            transform: translateY(-2px);
+        }
+ 
+        .contact-info {
+            margin-top: 40px;
+            text-align: center;
+            padding-top: 40px;
+            border-top: 1px solid #d2d2d7;
+        }
+ 
+        .contact-info p {
+            color: #6e6e73;
+            margin-bottom: 10px;
+        }
+ 
+        @media (max-width: 768px) {
+            .contact-container {
+                padding: 40px 30px;
+            }
+ 
+            .contact-info {
+                font-size: 14px;
+            }
+        }
+ 
+        @media (max-width: 480px) {
+            .contact-container {
+                padding: 30px 20px;
+            }
+        }
+
         /* Print Styles for about.html */
  
         @media print {
