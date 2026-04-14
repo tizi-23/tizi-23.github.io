@@ -1,25 +1,12 @@
 /* Navigation */
-        header, nav {
+        nav {
             background: rgba(255, 255, 255, 0.8);
             backdrop-filter: saturate(180%) blur(20px);
             position: sticky;
             top: 0;
             z-index: 1000;
             border-bottom: 1px solid #d2d2d7;
-        }
-
-        /* Prevent double border when header wraps nav */
-        header nav {
-            border-bottom: none;
-            position: static;
-            background: transparent;
-            backdrop-filter: none;
-        }
-
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px 40px;
+            padding: 20px max(40px, calc((100% - 1200px) / 2));
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -50,4 +37,62 @@
 
         .nav-links a.active {
             font-weight: 600;
+        }
+
+        .nav-toggle {
+            display: none;
+        }
+
+        .nav-toggle-label {
+            display: none;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        .nav-toggle-label span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background: #1d1d1f;
+            margin: 5px 0;
+            transition: 0.3s;
+        }
+
+        @media (max-width: 768px) {
+            .nav-toggle-label {
+                display: block;
+            }
+
+            .nav-links {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: white;
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+                transform: translateY(-100%);
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.3s;
+            }
+
+            .nav-toggle:checked ~ .nav-links {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+
+            .nav-toggle:checked ~ .nav-toggle-label span:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+
+            .nav-toggle:checked ~ .nav-toggle-label span:nth-child(2) {
+                opacity: 0;
+            }
+
+            .nav-toggle:checked ~ .nav-toggle-label span:nth-child(3) {
+                transform: rotate(-45deg) translate(7px, -6px);
+            }
         }
