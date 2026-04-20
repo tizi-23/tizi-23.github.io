@@ -329,6 +329,94 @@
             }
         }
 
+        /* ====================== */
+        /* Projects Page Styles   */
+        /* ====================== */
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .project-content {
+            padding: 30px;
+        }
+
+        .project-content h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .project-content p {
+            color: #6e6e73;
+            line-height: 1.6;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .project-content code {
+            font-family: "SF Mono", Menlo, Consolas, monospace;
+            font-size: 14px;
+            background: #f5f5f7;
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: #1d1d1f;
+        }
+
+        .project-tag {
+            display: inline-block;
+            padding: 8px 16px;
+            background: #f5f5f7;
+            border-radius: 20px;
+            font-size: 12px;
+            color: #6e6e73;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .projects-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .project-card {
+                border-radius: 16px;
+            }
+
+            .project-content {
+                padding: 24px 20px;
+            }
+
+            .project-image {
+                height: 200px;
+            }
+        }
+
         /* Contact Page Styles */
  
         .contact-container {
@@ -421,7 +509,8 @@
             }
         }
 
-        /* Print Styles for about.html */
+
+        /* Print Styles */
  
         @media print {
  
@@ -447,6 +536,7 @@
             .about-text ol,
             .about-text li,
             .section h1,
+            .section h2,
             .section > h1,
             .section > p,
             .section ul,
@@ -454,6 +544,23 @@
             .section li,
             .custom-list,
             .custom-list li,
+            .projects-grid,
+            .project-card,
+            .project-content,
+            .project-content h3,
+            .project-content p,
+            .project-content code,
+            .project-tag,
+            .hero,
+            .hero h1,
+            .hero p,
+            .reflection-box,
+            .reflection-box h2,
+            .reflection-box p,
+            .contact-container,
+            .contact-info,
+            .contact-info p,
+            .contact-info p strong,
             footer,
             footer p {
                 visibility: visible;
@@ -465,12 +572,24 @@
             .about-text ol,
             .about-text li,
             .section h1,
+            .section h2,
             .section > h1,
             .section > p,
             .section ul,
             .section ol,
             .section li,
             .custom-list li,
+            .project-card,
+            .project-content h3,
+            .project-content p,
+            .project-content code,
+            .project-tag,
+            .hero h1,
+            .hero p,
+            .reflection-box h2,
+            .reflection-box p,
+            .contact-info p,
+            .contact-info p strong,
             footer,
             footer p {
                 color: #000 !important;
@@ -484,10 +603,12 @@
             .feature-icon,
             .feature-grid,
             .feature-card,
-            .hero,
             .cta-button,
             .resume-link,
-            .reflection-box {
+            .project-image,
+            figure,
+            form,
+            .submit-button {
                 display: none !important;
             }
  
@@ -567,6 +688,141 @@
                 line-height: 1.4;
             }
  
+            /* Projects: strip card chrome for print */
+            .projects-grid {
+                display: block !important;
+                grid-template-columns: none !important;
+                gap: 0 !important;
+                margin-top: 8px !important;
+            }
+ 
+            .project-card {
+                background: white !important;
+                border-radius: 0 !important;
+                box-shadow: none !important;
+                border: none !important;
+                border-bottom: 1px solid #000 !important;
+                overflow: visible !important;
+                margin: 0 0 8px 0 !important;
+                padding: 4px 0 !important;
+                transform: none !important;
+            }
+ 
+            .project-content {
+                padding: 0 !important;
+            }
+ 
+            .project-content h3 {
+                font-size: 14px !important;
+                font-weight: 700 !important;
+                margin: 0 0 2px 0 !important;
+            }
+ 
+            .project-content p {
+                font-size: 12px !important;
+                line-height: 1.3 !important;
+                margin: 0 0 4px 0 !important;
+                color: #000 !important;
+            }
+ 
+            .project-content code {
+                background: none !important;
+                padding: 0 !important;
+                font-family: "Courier New", Courier, monospace !important;
+                font-size: 11px !important;
+            }
+ 
+            .project-tag {
+                background: none !important;
+                border: 1px solid #000 !important;
+                border-radius: 0 !important;
+                padding: 1px 6px !important;
+                margin: 0 4px 2px 0 !important;
+                font-size: 10px !important;
+                color: #000 !important;
+            }
+ 
+            /* Hero (index.html): strip gradient/padding, flatten to simple heading */
+            .hero {
+                background: white !important;
+                color: #000 !important;
+                padding: 0 !important;
+                text-align: left !important;
+            }
+ 
+            .hero h1 {
+                font-size: 24px !important;
+                font-weight: 700 !important;
+                margin: 0 0 4px 0 !important;
+                letter-spacing: normal !important;
+            }
+ 
+            .hero p {
+                font-size: 12px !important;
+                font-weight: normal !important;
+                margin: 0 0 8px 0 !important;
+                opacity: 1 !important;
+            }
+ 
+            /* Reflection boxes: strip card chrome */
+            .reflection-box {
+                background: white !important;
+                border: none !important;
+                border-radius: 0 !important;
+                box-shadow: none !important;
+                padding: 0 !important;
+                margin: 0 0 8px 0 !important;
+            }
+ 
+            .reflection-box h2 {
+                font-size: 14px !important;
+                font-weight: 700 !important;
+                margin: 4px 0 2px 0 !important;
+                text-align: left !important;
+                letter-spacing: normal !important;
+            }
+ 
+            .reflection-box p {
+                font-size: 12px !important;
+                line-height: 1.3 !important;
+                margin: 0 0 4px 0 !important;
+                text-indent: 0 !important;
+                font-style: normal !important;
+            }
+ 
+            .reflection-box blockquote {
+                border-left: none !important;
+                padding: 0 !important;
+                margin: 4px 0 !important;
+                font-size: 12px !important;
+                line-height: 1.3 !important;
+            }
+ 
+            /* Contact (contact.html): strip container chrome, show contact info only */
+            .contact-container {
+                background: white !important;
+                box-shadow: none !important;
+                border: none !important;
+                border-radius: 0 !important;
+                padding: 0 !important;
+                margin: 0 !important;
+                max-width: none !important;
+            }
+ 
+            .contact-info {
+                border: none !important;
+                border-top: 1px solid #000 !important;
+                margin: 8px 0 0 0 !important;
+                padding: 4px 0 0 0 !important;
+                text-align: left !important;
+            }
+ 
+            .contact-info p {
+                font-size: 12px !important;
+                line-height: 1.4 !important;
+                margin: 0 0 2px 0 !important;
+            }
+ 
             *, *::before, *::after {
                 page-break-inside: avoid;
                 break-inside: avoid;
@@ -578,4 +834,5 @@
                 color: #000 !important;
             }
         }
+ 
  
