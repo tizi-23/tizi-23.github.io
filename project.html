@@ -30,66 +30,48 @@
         <h2>My Projects</h2>
         <div class="projects-grid">
 
-            <div class="project-card">
-                <div class="project-image"></div>
-                <div class="project-content">
-                    <h3>Personal Portfolio Website</h3>
-                    <p>A multi-page portfolio built from scratch with an Apple-inspired aesthetic, hosted on GitHub Pages. Features responsive layouts, a CSS-only hamburger nav, and a dedicated print stylesheet for the About page.</p>
-                    <span class="project-tag">HTML</span>
-                    <span class="project-tag">CSS</span>
-                    <span class="project-tag">GitHub Pages</span>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-image"></div>
+            <!-- Slot 1: Priority Search Tree -->
+            <div class="project-card" id="pst">                
+                <div class="project-image" style="background-image: url('pst.png'); background-size: cover; background-position: center;"></div>
                 <div class="project-content">
                     <h3>Priority Search Tree</h3>
-                    <p>A C implementation of a Priority Search Tree supporting <code>create_pst</code>, <code>delete</code>, <code>enumerate_rectangle</code>, and <code>special_query</code> operations, paired with a benchmarking program and a formatted performance report.</p>
-                    <span class="project-tag">C</span>
+                    <p>A C implementation of a Priority Search Tree supporting <code>create_pst</code>, <code>delete</code>, <code>special_query</code>, and optimal <code>Big(O) Notation</code> operations, paired with a benchmarking program and a formatted performance report. Validated by 2,000 randomized correctness checks at 100% pass rate. <a href="A1_Report.pdf" target="_blank">View report</a> <a href="pst.c" target="_blank">View source</a></p>
+                    <span class="project-tag">Big (O) Notation</span>
                     <span class="project-tag">Data Structures</span>
                     <span class="project-tag">Benchmarking</span>
                 </div>
             </div>
 
-            <div class="project-card">
-                <div class="project-image"></div>
+            <!-- Slot 2: FSM Vending Machine -->
+            <div class="project-card" id="vending">
+                <div class="project-image" style="background-image: url('vending.png'); background-size: cover; background-position: center;"></div>
                 <div class="project-content">
-                    <h3>Randomized BST (Treap)</h3>
-                    <p>A probabilistic, amortized Randomized BST implemented as a treap in C, using split and merge as its core operations. Includes timing experiments comparing expected vs. observed performance.</p>
-                    <span class="project-tag">C</span>
-                    <span class="project-tag">Treap</span>
-                    <span class="project-tag">Algorithms</span>
+                    <h3>FSM Vending Machine</h3>
+                    <p>A digitally designed vending machine circuit coded in Verilog-A for CMP_SC 2270: Introduction to Logic Systems. The design implements a finite state machine driven by two T flip-flops, accepts quarters and dollars, tracks transaction state, and correctly dispenses product and change across three transaction scenarios. <a href="vending.pdf" target="_blank">View report</a></p>
+                    <span class="project-tag">Verilog-A</span>
+                    <span class="project-tag">Digital Logic</span>
+                    <span class="project-tag">FSM</span>
+                </div>
+            </div>
+            
+            <!-- Slot 3: GTA V Traction Control Mod -->
+            <div class="project-card" id="gta">
+                <div class="project-image" style="background-image: url('download.jpeg'); background-size: cover; background-position: center;"></div>
+                <div class="project-content">
+                    <h3>GTA V Traction Control Mod</h3>
+                    <p>A PC mod for Grand Theft Auto V that I built for fun and never published. Written in C# for ScriptHookVDotNet, it adds a dynamic traction control system that detects wheel slip in real time and adjusts for vehicle class, road surface (ice, snow, mud, wet concrete), weather, speed, and tire health. Includes hotkeys to toggle TC on/off and tune intervention strength on the fly. <a href="gta5_traction_control.cs" target="_blank">View report</a></p>
+                    <span class="project-tag">C#</span>
+                    <span class="project-tag">ScriptHookV</span>
+                    <span class="project-tag">Game Modding</span>
                 </div>
             </div>
 
-            <div class="project-card">
-                <div class="project-image"></div>
-                <div class="project-content">
-                    <h3>Campus Quest</h3>
-                    <p>An object-oriented Java project for CMP_SC/INFOTC 3330 that models campus engagement through an inheritance hierarchy of <code>EventCheckInQuest</code>, <code>VolunteerQuest</code>, and <code>StreakQuest</code> classes, managed by a central <code>QuestBoard</code>.</p>
-                    <span class="project-tag">Java</span>
-                    <span class="project-tag">OOP</span>
-                    <span class="project-tag">Inheritance</span>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-image"></div>
-                <div class="project-content">
-                    <h3>Array & Search Algorithms</h3>
-                    <p>A collection of foundational C exercises from early coursework, including a Two Sum solution and other array-manipulation problems. A warm-up for the data-structures work that followed.</p>
-                    <span class="project-tag">C</span>
-                    <span class="project-tag">Problem Solving</span>
-                    <span class="project-tag">Arrays</span>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-image"></div>
+            <!-- Slot 4: EV Range Research Essay -->
+            <div class="project-card" id="ev-essay">
+                <div class="project-image" style="background-image: url('tesla.webp'); background-size: cover; background-position: center;"></div>
                 <div class="project-content">
                     <h3>EV Range Research Essay</h3>
-                    <p>A ~1,600-word problem-solving research essay written for English Composition, analyzing range anxiety in electric vehicles through the lens of personal experience with a Tesla and current industry data.</p>
+                    <p>A problem-solving research essay originally written for English Composition, analyzing range anxiety and solutions in electric vehicles through the lens of personal experience with a Tesla and current industry data. <a href="researchPaper.pdf" target="_blank">View essay</a></p>
                     <span class="project-tag">Research</span>
                     <span class="project-tag">Writing</span>
                     <span class="project-tag">Analysis</span>
