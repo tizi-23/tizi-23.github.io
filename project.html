@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Projects</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="nav.css">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Portfolio</div>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <label for="nav-toggle" class="nav-toggle-label">
+            <span></span><span></span><span></span>
+        </label>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="project.html" class="active">Projects</a></li>
+            <li><a href="reflection.html">Reflection</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Projects Content -->
+    <div class="section">
+        <h2>My Projects</h2>
+        <div class="projects-grid">
+
+            <div class="project-card">
+                <div class="project-image"></div>
+                <div class="project-content">
+                    <h3>Personal Portfolio Website</h3>
+                    <p>A multi-page portfolio built from scratch with an Apple-inspired aesthetic, hosted on GitHub Pages. Features responsive layouts, a CSS-only hamburger nav, and a dedicated print stylesheet for the About page.</p>
+                    <span class="project-tag">HTML</span>
+                    <span class="project-tag">CSS</span>
+                    <span class="project-tag">GitHub Pages</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image"></div>
+                <div class="project-content">
+                    <h3>Priority Search Tree</h3>
+                    <p>A C implementation of a Priority Search Tree supporting <code>create_pst</code>, <code>delete</code>, <code>enumerate_rectangle</code>, and <code>special_query</code> operations, paired with a benchmarking program and a formatted performance report.</p>
+                    <span class="project-tag">C</span>
+                    <span class="project-tag">Data Structures</span>
+                    <span class="project-tag">Benchmarking</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image"></div>
+                <div class="project-content">
+                    <h3>Randomized BST (Treap)</h3>
+                    <p>A probabilistic, amortized Randomized BST implemented as a treap in C, using split and merge as its core operations. Includes timing experiments comparing expected vs. observed performance.</p>
+                    <span class="project-tag">C</span>
+                    <span class="project-tag">Treap</span>
+                    <span class="project-tag">Algorithms</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image"></div>
+                <div class="project-content">
+                    <h3>Campus Quest</h3>
+                    <p>An object-oriented Java project for CMP_SC/INFOTC 3330 that models campus engagement through an inheritance hierarchy of <code>EventCheckInQuest</code>, <code>VolunteerQuest</code>, and <code>StreakQuest</code> classes, managed by a central <code>QuestBoard</code>.</p>
+                    <span class="project-tag">Java</span>
+                    <span class="project-tag">OOP</span>
+                    <span class="project-tag">Inheritance</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image"></div>
+                <div class="project-content">
+                    <h3>Array & Search Algorithms</h3>
+                    <p>A collection of foundational C exercises from early coursework, including a Two Sum solution and other array-manipulation problems. A warm-up for the data-structures work that followed.</p>
+                    <span class="project-tag">C</span>
+                    <span class="project-tag">Problem Solving</span>
+                    <span class="project-tag">Arrays</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image"></div>
+                <div class="project-content">
+                    <h3>EV Range Research Essay</h3>
+                    <p>A ~1,600-word problem-solving research essay written for English Composition, analyzing range anxiety in electric vehicles through the lens of personal experience with a Tesla and current industry data.</p>
+                    <span class="project-tag">Research</span>
+                    <span class="project-tag">Writing</span>
+                    <span class="project-tag">Analysis</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>Tianyi Zhang  |  ✉️ tzdhz@umsystem.edu  | 📞 (626) 267-1376</p>
+    </footer>
+
+</body>
+</html>
